@@ -2,7 +2,7 @@ deployments:
   odoo:
     pre_launch:
       - target: db
-        command: run
+        command: exec
         options: "{target} bash -c 'ls -la ./'"
     post_launch:
       - target: db
