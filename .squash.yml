@@ -5,7 +5,7 @@ deployments:
         command: exec
         options: "{target} bash -c 'ls -la ./'"
     post_launch:
-      - target: db
+      - target: db1
         command: exec
         options: "{target} bash -c 'echo test && echo test > test'"
       - target: web
