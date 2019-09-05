@@ -2,3 +2,4 @@ deployments:
   odoo:
     dockerimage: odoo:${TAG}
     dockerfileonly: true
+    port_forwarding: 80:8069
