@@ -3,3 +3,11 @@ deployments:
     dockerimage: odoo:${TAG}
     dockerfileonly: true
     port_forwarding: 80:8069
+    run_options: -e HOST=$(echo $POSTGRESQL | cut -f1 -d":")
+    depends_on:
+      POSTGRESQL:
+        app: odoo-test/postgres:postgres
+  postgres:
+    dockerimage: postgres
+    run_options: -e POSTGRES_PASSWORD=odoo -e POSTGRES_USER=odoo
+    check_service_ports: 5432
