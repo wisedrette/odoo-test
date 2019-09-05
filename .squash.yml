@@ -1,4 +1,4 @@
 deployments:
   odoo:
-    dockerimage: odoo:${TAG}
+    dockerimage: odoo
     dockerfileonly: true
