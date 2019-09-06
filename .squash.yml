@@ -11,3 +11,4 @@ deployments:
     dockerimage: postgres
     run_options: -e POSTGRES_PASSWORD=odoo -e POSTGRES_USER=odoo
     check_service_ports: 5432
+    port_forwarding: 5432:5432
