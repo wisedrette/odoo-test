@@ -1,6 +1,6 @@
 deployments:
   odoo:
-    dockerimage: odoo:${TAG}
+    dockerimage: odoo
     dockerfileonly: true
     port_forwarding: 80:8069
     run_options: -e HOST=$(echo $POSTGRESQL | cut -f1 -d":")
