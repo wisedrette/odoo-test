@@ -3,4 +3,3 @@ deployments:
     install:
       - docker-compose build
       - docker-compose up -d
-      - docker-compose exec web bash -c 'python manage.py makemigrations && python manage.py migrate'      
