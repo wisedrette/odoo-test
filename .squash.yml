@@ -6,7 +6,7 @@ deployments:
     run_options: -e HOST=$(echo $POSTGRESQL | cut -f1 -d":")
     depends_on:
       - POSTGRESQL:
-          app: odoo-test/postgres:postgres
+          app: odoo-test:postgres
   postgres:
     dockerimage: postgres:9.4
     run_options: -e POSTGRES_PASSWORD=odoo -e POSTGRES_USER=odoo
