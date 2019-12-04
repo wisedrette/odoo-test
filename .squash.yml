@@ -1,13 +1,3 @@
 deployments:
   odoo:
-    pre_launch:
-      - target: db
-        command: exec
-        options: "{target} bash -c 'ls -la ./'"
-    post_launch:
-      - target: db1
-        command: exec
-        options: "{target} bash -c 'echo test && echo test > test'"
-      - target: web
-        command: exec
-        options: "{target} bash -c 'ls -la ./'"
+    wait_ready: 5
